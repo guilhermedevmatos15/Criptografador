@@ -6,7 +6,7 @@ export default function decodificar(string = '', key = 1) {
    const {alphabetLower, alphabetUpper} = data;
 
 	return string.reduce((result, letter) => {
-		if (letter === ' ' || numbers.includes(letter)) return result + letter;
+		if (letter === ' ' || data.numbers.includes(letter)) return result + letter;
 
 		if (alphabetLower.includes(letter)) {
 			const indexOnAlph = alphabetLower.indexOf(letter);
