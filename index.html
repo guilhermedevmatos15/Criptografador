@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Codificador e descodificador | Guilherme</title>
+
+   <!-- css -->
+   <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+   <main>
+      <header>
+         <nav>
+            <button class="btn" data-change="cod">Cod</button>
+            <button class="btn" data-change="decod">Decod</button>
+         </nav>
+      </header>
+
+      <div class="codificador open">
+         <h1>Codificador</h1>
+
+         <form action="#">
+            <label for="text-cod">Escreva sua mensagem:</label>
+            <input type="text" name="text-cod" id="text-cod" placeholder="Ex: Olá mundo!" minlength="1">
+
+            <label for="#">Informe a 'key' para codificação [1 - 50]:</label>
+            <input type="number" name="text-cod-key" id="text-cod-key" placeholder="Ex: 3" min="1" max="50">
+
+            <output>Resultado: <span></span></output>
+         </form>
+      </div>
+
+      <div class="decodificador">
+         <h1>Decodificador</h1>
+
+         <form action="#">
+            <label for="text-cod">Escreva sua mensagem:</label>
+            <input type="text" name="text-decod" id="text-decod" placeholder="Ex: Olá mundo!" minlength="1">
+
+            <label for="#">Informe a 'key' para decodificação [1 - 50]:</label>
+            <input type="number" name="text-decod-key" id="text-decod-key" placeholder="Ex: 3" min="1" max="50">
+            
+            <output>Resultado: <span></span></output>
+         </form>
+
+      </div>
+   </main>
+
+   <script src="./assets/js/main.js" type="module"></script>
+</body>
+</html>
