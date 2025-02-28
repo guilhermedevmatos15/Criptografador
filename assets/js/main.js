@@ -40,8 +40,13 @@ $codForm.addEventListener('submit', (e) => {
 		return;
 	}
 
-	$codOutput.querySelector('span').innerHTML = codificar(message, key);
+	const result = codificar(message, key);
+
+	$codOutput.querySelector('span').innerHTML = result;
 	$codOutput.classList.add('visible');
+	$codOutput.querySelector('.btn--cop').addEventListener('click', () => {
+		navigator.clipboard.writeText(result);
+	});
 });
 
 // lógica de decodificação
@@ -62,6 +67,11 @@ $decodForm.addEventListener('submit', (e) => {
 		return;
 	}
 
-	$decodOutput.querySelector('span').innerHTML = decodificar(message, key);
+	const result = decodificar(message, key);
+
+	$decodOutput.querySelector('span').innerHTML = result;
 	$decodOutput.classList.add('visible');
+	$decodOutput.querySelector('.btn--cop').addEventListener('click', () => {
+		navigator.clipboard.writeText(result);
+	});
 });
